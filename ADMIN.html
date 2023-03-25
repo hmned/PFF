@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Formulaire de contact</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta name="description" content="BreezyCV - Resume / CV / vCard Template" />
+    <meta name="keywords" content="vcard, resposnive, retina, resume, jquery, css3, bootstrap, Material CV, portfolio" />
+    <meta name="author" content="lmpixels" />
+    <link rel="shortcut icon" href="favicon.ico">
+
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <link rel="stylesheet" href="css/reset.css" type="text/css">
+    <link rel="stylesheet" href="css/bootstrap-grid.min.css" type="text/css">
+    <link rel="stylesheet" href="css/animations.css" type="text/css">
+    <link rel="stylesheet" href="css/perfect-scrollbar.css" type="text/css">
+    <link rel="stylesheet" href="css/owl.carousel.css" type="text/css">
+    <link rel="stylesheet" href="css/magnific-popup.css" type="text/css">
+    <link rel="stylesheet" href="css/main.css" type="text/css">
+
+    <script src="js/modernizr.custom.js"></script>
+
+  </head>
+  <body>
+<br>
+    <h1 style="text-align: center;">Exemplaire de formule de CV</h1>
+    <br>
+    <form>
+      <label for="nom">Nom:</label>
+      <input type="text" id="nom" name="nom" placeholder="Hamdi" required>
+<br><br>
+      <label for="prenom">Prénom:</label>
+      <input type="text" id="prenom" name="prenom" placeholder="Mned" required>
+<br><br>
+      <label for="email">E-mail:</label>
+      <input type="email" id="email" name="email" placeholder="exemple@exemple.net"required>
+<br><br><br>
+      <button type="submit">Envoyer</button>
+      <br>
+    </form>
+
+    <script>
+      const form = document.querySelector('form');
+      const nom = document.querySelector('#nom');
+      const prenom = document.querySelector('#prenom');
+      const email = document.querySelector('#email');
+
+      form.addEventListener('submit', (e) => {
+        e.preventDefault();
+
+        if (nom.value === '' || prenom.value === '' || email.value === '') {
+          const error = document.createElement('p');
+          error.classList.add('error');
+          error.textContent = 'Veuillez remplir tous les champs.';
+          form.appendChild(error);
+        } else {
+          alert('Le formulaire a été envoyé.');
+        }
+      });
+    </script>
+  </body>
+</html>
